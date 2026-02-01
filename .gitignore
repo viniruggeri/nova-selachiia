@@ -18,3 +18,6 @@ outputs/
 
 # env
 .env
+
+# models 
+.pt

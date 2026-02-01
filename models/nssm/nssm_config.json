@@ -1,0 +1,56 @@
+{
+  "model": {
+    "input_dim": 6,
+    "hidden_dim": 64,
+    "output_dim": 1,
+    "num_layers": 2,
+    "num_resnet_blocks": 2,
+    "dropout": 0.2,
+    "noise_sigma": 0.01,
+    "use_skip_connections": true,
+    "learning_rate": 0.001,
+    "weight_decay": 1e-05,
+    "batch_size": 64,
+    "max_epochs": 50,
+    "patience": 20,
+    "grad_clip": 1.0,
+    "enable_anomaly_detection": false,
+    "enable_nan_hooks": false,
+    "mc_samples": 100
+  },
+  "data": {
+    "features": [
+      "sst",
+      "sst_anom",
+      "effort_hours",
+      "prey_count",
+      "month_sin",
+      "month_cos"
+    ],
+    "target": "shark_presence",
+    "seq_len": 12,
+    "batch_size": 32,
+    "train_ratio": 0.6,
+    "val_ratio": 0.2,
+    "test_ratio": 0.2
+  },
+  "training": {
+    "final_train_loss": 0.0038151891868621157,
+    "final_val_loss": 0.013493383272887094,
+    "best_val_loss": 0.011125531180387779,
+    "best_epoch": 34,
+    "total_epochs": 49
+  },
+  "test_metrics": {
+    "mse": 0.010311124846339226,
+    "rmse": 0.10154370904363906,
+    "mae": 0.026530379429459572,
+    "r2": -18.871387481689453
+  },
+  "test_classification": {
+    "f1": 0.00757796560769455,
+    "auc_roc": 0.7444353121782838,
+    "auc_pr": 0.004120158422960652
+  },
+  "timestamp": "2026-02-01T15:24:42.048760"
+}
